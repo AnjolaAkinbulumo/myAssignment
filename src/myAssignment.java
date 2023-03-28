@@ -1,21 +1,58 @@
+/*
+ * @Class: Weekend Method Homework
+ * @author: Anjola Akinbulumo
+ * @Course: ITEC 2140-04, Spring 2023
+ * @written: March 27, 2023
+ */
 public class myAssignment {
     public static void main(String[] args) {
-System.out.println(reverseStr("Anjola"));
-System.out.println(sumDigits(23445));
-System.out.println(birthdayName("Anjola"));
-System.out.println(swapEnds("Akinbulumo"));
-System.out.println(fibonacci(3));
-System.out.println(everyOther("Chocolate"));
-System.out.println(nonStart("Anjola","Akinbulumo"));
-System.out.println(luckySum(7,9, 8));
-System.out.println(hasPalindrome("Mountains"));
-System.out.println(powerOfTwo(520));
+myAssignment ma = new myAssignment();
+
+String name = ma.reverseStr("Anjola");
+System.out.println(name);
+
+
+int num = ma.sumDigits(246810);
+System.out.println(num);
+
+
+String birthdayn = ma.birthdayName("Daniel");
+System.out.println(birthdayn);
+
+
+String swap = ma.swapEnds("Akinbulumo");
+System.out.println(swap);
+
+
+int fib = ma.fibonacci(16);
+System.out.println(fib);
+
+
+String everyO = ma.everyOther("Chocolate");
+System.out.println(everyO);
+
+
+String nonstart = ma.nonStart("Akinbulumo", "Anjola");
+System.out.println(nonstart);
+
+
+int luckyS = ma.luckySum(16, 12, 3);
+System.out.println(luckyS);
+
+
+boolean hasP = ma.hasPalindrome("level");
+System.out.println(hasP);
+
+
+boolean pot = ma.powerOfTwo(16);
+System.out.println(pot);
+
 
 
 
     }
     // Reverse string Method
-    public static String reverseStr(String x) {
+    public String reverseStr(String x) {
         String result = "";
         for (int i = x.length() - 1; i >= 0; i--) {
             result += x.charAt(i) + "" + x.charAt(i);
@@ -26,7 +63,7 @@ System.out.println(powerOfTwo(520));
 
 
     // Sum Digits Method
-    public static int sumDigits(int n) {
+    public int sumDigits(int n) {
 
         if (n == 0) {
             return 0;
@@ -43,7 +80,7 @@ System.out.println(powerOfTwo(520));
 
 
     // Birthday Name method
-    public static String birthdayName(String name){
+    public String birthdayName(String name){
         return "Happy Birthday " + name + "!";
     }
     //Missing front Method
@@ -64,7 +101,7 @@ System.out.println(powerOfTwo(520));
         }
     }
     //fibonacci method
-    public static int fibonacci(int n) {
+    public int fibonacci(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Input must be non-negative.");
         } else if (n == 0) {
@@ -85,7 +122,7 @@ System.out.println(powerOfTwo(520));
 
 
     //Every Other Method
-    public static String everyOther(String str) {
+    public String everyOther(String str) {
         String result = "";
         for (int i = 0; i < str.length(); i += 2) {
             result += str.charAt(i);
@@ -95,7 +132,7 @@ System.out.println(powerOfTwo(520));
 
 
     //NonStart method
-    public static String nonStart(String a, String b) {
+    public String nonStart(String a, String b) {
         if(a.length() < 2 || b.length() < 2){
             return "";
         }
@@ -109,7 +146,7 @@ System.out.println(powerOfTwo(520));
 
 
     //luckySum Method
-    public static int luckySum(int a, int b, int c) {
+    public int luckySum(int a, int b, int c) {
         if (a == 13){
             return 0;
         }
@@ -125,7 +162,7 @@ System.out.println(powerOfTwo(520));
 
     }
 //hasPalindrome
-public static boolean hasPalindrome(String str) {
+public boolean hasPalindrome(String str) {
     str = str.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
     for (int i = 0; i < str.length(); i++) {
         // check for odd-length palindromes
@@ -145,7 +182,7 @@ public static boolean hasPalindrome(String str) {
 }
 
     //Power of two method
-    public static boolean powerOfTwo(int n) {
+    public  boolean powerOfTwo(int n) {
         if (n == 0) {
             return false;
         } else {
